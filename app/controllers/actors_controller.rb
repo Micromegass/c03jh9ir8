@@ -1,2 +1,9 @@
 class ActorsController < ApplicationController
-end
+
+
+    def show
+        @actors = Actor.all
+        render :actors        
+    end 
+
+end 

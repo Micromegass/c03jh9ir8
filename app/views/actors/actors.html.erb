@@ -1,0 +1,30 @@
+
+
+
+
+<h1>Listing Actors</h1>
+ 
+<table>
+  <thead>
+    <tr>
+      <th>Foto</th>
+      <th>Name</th>
+      <th>Bio</th>
+      <th>Birthdate</th>
+       <th>Birthplace</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+ 
+  <tbody>
+    <% @actors.each do |actor| %>
+      <tr>
+       <td><%= image_tag  "seeds.rb" %></td>
+        <td><%= actor.name %></td>
+        <td><%= actor.bio %></td>
+        <td><%= actor.birth_date %></td>       
+         <td><%= actor.birth_place %></td>       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
