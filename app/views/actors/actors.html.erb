@@ -19,11 +19,15 @@
   <tbody>
     <% @actors.each do |actor| %>
       <tr>
-       <td><%= image_tag  "seeds.rb" %></td>
+       <td> <img src="<%=actor.image_url%>" alt="actor"></td>
         <td><%= actor.name %></td>
         <td><%= actor.bio %></td>
         <td><%= actor.birth_date %></td>       
-         <td><%= actor.birth_place %></td>       
+         <td><%= actor.birth_place %></td>   
+
+        <% if actor.alive == false %>
+       <td><%= actor.death_date %> </td>
+      <% end %>
       </tr>
     <% end %>
   </tbody>
