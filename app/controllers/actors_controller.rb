@@ -1,7 +1,7 @@
 class ActorsController < ApplicationController
 
 
-    def show
+    def index
         @actors = Actor.all
         render :actors        
     end 
