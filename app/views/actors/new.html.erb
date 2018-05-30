@@ -2,9 +2,35 @@
 
 <%= form_for @actor do |t| %>
   <div>
-    <%= t.label :bio %>
-    <%= t.text_area :name%>
+
+    <%= t.label :image_url %>
+    <%= t.url_field :image_url%> 
+
+    <%= t.label :name  %>
+    <%= t.text_field :name%>
   
+    <%= t.label :bio %>
+    <%= t.text_area :bio, rows: 10%>
+
+    <%= t.radio_button :alive, true %>
+    <%= t.radio_button :alive, false %>
+
+
+    <%= t.label :birth_date %>
+    <%= t.date_field :birth_date%>
+
+    <%= t.label :birth_place %>
+    <%= t.text_field :birth_place%>
+
+    
+    <%= t.label :death_place %>
+    <%= t.text_field :death_place%>
+    
+    <%= t.label :death_date %>
+    <%= t.date_field :death_date%>
+
   </div>
   <%= t.submit %>
 <% end %>
+
+
